@@ -1,27 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web
+  name: web-blue
   namespace: robokart
   labels: # these labels belong to deployment
     app: web
     project: robokart
     tier: web
-    version: blue
 spec:
   replicas: 1
   selector:
     matchLabels: # these labels should match with pod
       app: web
       project: robokart
-      tier: web
       version: blue
   template: # this is the pod definition
     metadata:
       labels:
         app: web
         project: robokart
-        tier: web
         version: blue
     spec:
       volumes:

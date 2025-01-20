@@ -3,7 +3,6 @@ kind: Ingress
 metadata:
     name: robokart
     namespace: robokart
-    version: blue
     annotations:
         alb.ingress.kubernetes.io/scheme: internet-facing
         alb.ingress.kubernetes.io/target-type: ip

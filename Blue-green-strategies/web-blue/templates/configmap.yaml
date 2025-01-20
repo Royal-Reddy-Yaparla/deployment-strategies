@@ -3,7 +3,6 @@ kind: ConfigMap
 metadata:
   name: web
   namespace: robokart
-  version: blue
 data:
   nginx.conf: |
     user www-data;
