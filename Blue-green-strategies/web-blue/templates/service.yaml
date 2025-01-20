@@ -7,7 +7,7 @@ spec:
   type: LoadBalancer
   selector:
     app: web
-    version: blue
+    version: 1.0.0
     project: robokart
   ports:
   - name: web-port
