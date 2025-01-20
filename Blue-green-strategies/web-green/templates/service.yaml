@@ -3,14 +3,12 @@ kind: Service
 metadata:
   name: web
   namespace: robokart
-  version: green
 spec:
   type: LoadBalancer
   selector:
     app: web
-    tier: web
+    version: 2.0.0
     project: robokart
-    version: green
   ports:
   - name: web-port
     protocol: TCP
