@@ -4,7 +4,7 @@ metadata:
   name: web-green
   namespace: robokart
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: web-green
     version: 2.0.0
