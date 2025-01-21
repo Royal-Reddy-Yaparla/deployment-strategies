@@ -11,20 +11,20 @@ spec:
   replicas: 3
   selector:
     matchLabels: # these labels should match with pod
-      app: web
+      app: web-green
       project: robokart
       version: 2.0.0
   template: # this is the pod definition
     metadata:
       labels:
-        app: web
+        app: web-green
         project: robokart
         version: 2.0.0
     spec:
       volumes:
       - name: nginx-conf
         configMap:
-          name: nginx
+          name: web-green
           items:
           - key: nginx.conf
             path: nginx.conf
@@ -47,7 +47,7 @@ spec:
       volumes:
       - name: nginx-conf
         configMap:
-          name: web
+          name: web-green
           items:
             - key: nginx.conf
               path: nginx.conf

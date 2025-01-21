@@ -6,7 +6,7 @@ metadata:
     annotations:
         alb.ingress.kubernetes.io/scheme: internet-facing
         alb.ingress.kubernetes.io/target-type: ip
-        alb.ingress.kubernetes.io/tags: Environment=dev,Project=robokart-green
+        alb.ingress.kubernetes.io/tags: Environment=dev,version=green,Project=robokart-green
         alb.ingress.kubernetes.io/group.name: robokart-green
 spec:
   ingressClassName: alb

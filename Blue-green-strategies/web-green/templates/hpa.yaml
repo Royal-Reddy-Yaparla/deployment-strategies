@@ -7,7 +7,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: web-blue
+    name: web-green
   minReplicas: 3
   maxReplicas: 10
   metrics:
