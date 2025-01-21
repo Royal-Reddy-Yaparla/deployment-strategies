@@ -18,6 +18,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: web
+            name: web-green
             port:
               number: 80
