@@ -11,7 +11,7 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-  - host: "robokart.royalreddy.site"
+  - host: "robokartgreen.royalreddy.site"
     http:
       paths:
       - path: /
