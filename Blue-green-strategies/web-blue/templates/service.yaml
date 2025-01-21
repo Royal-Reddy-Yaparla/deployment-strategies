@@ -6,8 +6,8 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: web
-    version: 1.0.0
+    app: web-green
+    version: 2.0.0
     project: robokart
   ports:
   - name: web-port
