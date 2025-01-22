@@ -4,7 +4,7 @@ metadata:
   name: web-canary
   namespace: robokart
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: web-canary
     version: 2.0.0
