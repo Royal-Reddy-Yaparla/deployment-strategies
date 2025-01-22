@@ -8,7 +8,7 @@ metadata:
     project: robokart
     tier: web
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels: # these labels should match with pod
       app: web
