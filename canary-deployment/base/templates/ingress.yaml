@@ -10,8 +10,8 @@ metadata:
     alb.ingress.kubernetes.io/group.name: robokart
     alb.ingress.kubernetes.io/actions.default: >
       {"Type": "forward", "TargetGroups": [
-        {"ServiceName": "web", "ServicePort": 80, "Weight": 0},
-        {"ServiceName": "web-canary", "ServicePort": 80, "Weight": 100}
+        {"ServiceName": "web", "ServicePort": 80, "Weight": 100},
+        {"ServiceName": "web-canary", "ServicePort": 80, "Weight": 0}
       ]}
 spec:
   ingressClassName: alb
