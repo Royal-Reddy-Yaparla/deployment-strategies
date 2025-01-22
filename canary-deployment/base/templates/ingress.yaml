@@ -1,18 +1,13 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: robokart
-  namespace: robokart
-  annotations:
-    alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/tags: Environment=dev,version=base,Project=robokart
-    alb.ingress.kubernetes.io/group.name: robokart
-    alb.ingress.kubernetes.io/actions.default: >
-      {"Type": "forward", "TargetGroups": [
-        {"ServiceName": "web", "ServicePort": 80, "Weight": 0},
-        {"ServiceName": "web-canary", "ServicePort": 80, "Weight": 100}
-      ]}
+    name: robokart
+    namespace: robokart
+    annotations:
+        alb.ingress.kubernetes.io/scheme: internet-facing
+        alb.ingress.kubernetes.io/target-type: ip
+        alb.ingress.kubernetes.io/tags: Environment=dev,version=base,Project=robokart
+        alb.ingress.kubernetes.io/group.name: robokart
 spec:
   ingressClassName: alb
   rules:
@@ -23,6 +18,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: web-green
+            name: web
             port:
               number: 80
