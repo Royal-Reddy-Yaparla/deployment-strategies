@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-canary
+  namespace: robokart
+spec:
+  type: ClusterIP
+  selector:
+    app: web-canary
+    version: 2.0.0
+    project: robokart
+  ports:
+  - name: web-canary-port
+    protocol: TCP
+    port: 80 # this port belongs to service
+    targetPort: 80 # this port belongs to container 

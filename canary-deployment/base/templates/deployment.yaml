@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-blue
+  name: web
   namespace: robokart
   labels: # these labels belong to deployment
     app: web

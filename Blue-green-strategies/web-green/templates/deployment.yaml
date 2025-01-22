@@ -29,7 +29,7 @@ spec:
           - key: nginx.conf
             path: nginx.conf
       containers:
-      - name: catalogue
+      - name: web
         image: "iamroyalreddy/web:{{ .Values.deployment.imageVersion }}"
         imagePullPolicy: Always
         resources:
