@@ -23,6 +23,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: default
+            name: web-green
             port:
-              name: use-action
+              number: 80
